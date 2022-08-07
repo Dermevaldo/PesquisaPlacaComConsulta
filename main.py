@@ -1,3 +1,4 @@
+import time
 from time import sleep
 
 from PIL import Image, ImageFilter
@@ -33,8 +34,9 @@ for letra in texto:
     elem.send_keys(letra)
 
 elem.send_keys(Keys.RETURN)
+sleep(5)
 driver.save_screenshot("resultado"+texto+".png")
-
+driver.close()
 
 
 
